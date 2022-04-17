@@ -7,7 +7,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.activity_main)
-        val circleView = MyViewShapes(this)
-        setContentView(circleView)
+//      To draw shapes
+//        val circleView = MyViewShapes(this)
+//        setContentView(circleView)
+//      TO draw lines
+
+        val line = DrawLineView(this)
+        setContentView(line)
     }
 }

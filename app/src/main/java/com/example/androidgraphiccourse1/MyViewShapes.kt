@@ -6,18 +6,20 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.view.View
 
-class MyViewShapes(context: Context) : View(context ,null){
+class MyViewShapes(context: Context?) : View(context ,null){
 
     private val redPaint : Paint =  Paint(Paint.ANTI_ALIAS_FLAG)
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        canvas?.drawCircle(300F , 300F , 30F , redPaint)
+        canvas.drawRect(10F, 30F, 200F, 200F, redPaint)
+        canvas.drawCircle(300F, 300F, 250F, redPaint)
+        canvas.drawCircle(300F , 300F , 30F , redPaint)
     }
     init {
         redPaint.alpha = 1
         redPaint.style = (Paint.Style.STROKE)
         redPaint.strokeWidth = 5F //set the line stroke width to 5
-        redPaint.color = Color.GREEN
+        redPaint.color = Color.RED
     }
 }
